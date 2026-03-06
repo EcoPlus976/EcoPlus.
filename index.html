@@ -205,32 +205,33 @@ nav {
 }
 
 .hero-pills {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  align-items: flex-end;
 }
 .hero-pill {
-  display: flex; align-items: center; gap: 0.55rem;
-  padding: 0.55rem 0.9rem;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(111,207,135,0.18);
-  border-radius: 8px;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.68rem; letter-spacing: 0.5px;
-  color: rgba(253,252,249,0.75);
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.2rem 0;
+  background: none; border: none;
+  font-family: 'Fraunces', serif;
+  font-size: 0.95rem; font-weight: 300; font-style: italic;
+  color: rgba(253,252,249,0.45);
   text-decoration: none;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
-  white-space: nowrap;
+  transition: color 0.2s, transform 0.2s;
+  letter-spacing: 0;
 }
 .hero-pill:hover {
-  background: rgba(111,207,135,0.1);
-  border-color: rgba(111,207,135,0.5);
   color: var(--lime);
+  transform: translateX(-4px);
 }
 .hero-pill-dot {
-  width: 5px; height: 5px; flex-shrink: 0;
+  width: 4px; height: 4px; flex-shrink: 0;
   background: var(--lime); border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s;
 }
+.hero-pill:hover .hero-pill-dot { opacity: 1; }
 .hero-pill-arrow { display: none; }
 
 .hero-cta-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
