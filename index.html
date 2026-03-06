@@ -204,6 +204,14 @@ nav {
   91%,100% { transform: translateY(0); }
 }
 
+.hero-svc-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem; letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(111,207,135,0.5);
+  text-align: right;
+  margin-bottom: 0.8rem;
+}
+
 .hero-pills {
   display: flex;
   flex-direction: column;
@@ -219,7 +227,6 @@ nav {
   color: rgba(253,252,249,0.45);
   text-decoration: none;
   transition: color 0.2s, transform 0.2s;
-  letter-spacing: 0;
 }
 .hero-pill:hover {
   color: var(--lime);
@@ -228,8 +235,7 @@ nav {
 .hero-pill-dot {
   width: 4px; height: 4px; flex-shrink: 0;
   background: var(--lime); border-radius: 50%;
-  opacity: 0;
-  transition: opacity 0.2s;
+  opacity: 0; transition: opacity 0.2s;
 }
 .hero-pill:hover .hero-pill-dot { opacity: 1; }
 .hero-pill-arrow { display: none; }
@@ -766,13 +772,14 @@ footer {
         </p>
       </div>
       <div class="hero-right-col">
+        <div class="hero-svc-label">Nuestros servicios</div>
         <div class="hero-pills">
-          <a href="#svc-ambiental" class="hero-pill"><span class="hero-pill-dot"></span><span>Servicios Ambientales</span><span class="hero-pill-arrow">→</span></a>
-          <a href="#svc-seguridad" class="hero-pill"><span class="hero-pill-dot"></span><span>Seguridad e Higiene</span><span class="hero-pill-arrow">→</span></a>
-          <a href="#svc-iso" class="hero-pill"><span class="hero-pill-dot"></span><span>Normas ISO 45001 · 14001</span><span class="hero-pill-arrow">→</span></a>
-          <a href="#svc-habilitacion" class="hero-pill"><span class="hero-pill-dot"></span><span>Habilitación de Negocios</span><span class="hero-pill-arrow">→</span></a>
-          <a href="#svc-soldadura" class="hero-pill"><span class="hero-pill-dot"></span><span>Inspección de Soldaduras</span><span class="hero-pill-arrow">→</span></a>
-          <a href="#svc-capacitacion" class="hero-pill"><span class="hero-pill-dot"></span><span>Capacitaciones</span><span class="hero-pill-arrow">→</span></a>
+          <a href="#svc-ambiental" class="hero-pill"><span class="hero-pill-dot"></span>Servicios Ambientales</a>
+          <a href="#svc-seguridad" class="hero-pill"><span class="hero-pill-dot"></span>Seguridad e Higiene</a>
+          <a href="#svc-iso" class="hero-pill"><span class="hero-pill-dot"></span>Normas ISO 45001 · 14001</a>
+          <a href="#svc-habilitacion" class="hero-pill"><span class="hero-pill-dot"></span>Habilitación de Negocios</a>
+          <a href="#svc-soldadura" class="hero-pill"><span class="hero-pill-dot"></span>Inspección de Soldaduras</a>
+          <a href="#svc-capacitacion" class="hero-pill"><span class="hero-pill-dot"></span>Capacitaciones</a>
         </div>
         <div class="hero-cta-row">
           <a href="#servicios" class="hero-btn">Ver todos los servicios →</a>
