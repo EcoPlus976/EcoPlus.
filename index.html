@@ -138,7 +138,7 @@ nav {
   position: relative; z-index:2;
   flex: 1;
   display: flex; flex-direction: column; justify-content: center;
-  padding: 4.2rem 2.5rem 1.5rem;
+  padding: 6rem 4rem 2rem;
   max-width: 1300px; margin: 0 auto; width: 100%;
 }
 
@@ -154,11 +154,11 @@ nav {
 /* TÍTULO: grande, full width, sin columna que lo achique */
 .hero-title {
   font-family: 'Fraunces', serif;
-  font-size: clamp(3.5rem, 6vw, 7rem);
+  font-size: clamp(3.8rem, 6.5vw, 7.5rem);
   line-height: 1.15;
   letter-spacing: -1px;
   color: var(--white);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   width: 100%;
 }
 .hero-title .line { display: block; overflow: visible; padding-bottom: 0.1em; }
@@ -205,36 +205,33 @@ nav {
 }
 
 .hero-pills {
-  display: flex; flex-direction: column; gap: 0.4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
 }
 .hero-pill {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0.7rem 1.1rem;
+  display: flex; align-items: center; gap: 0.55rem;
+  padding: 0.55rem 0.9rem;
   background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(111,207,135,0.2);
-  border-radius: 6px;
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.85rem; font-weight: 500;
-  color: rgba(253,252,249,0.85);
+  border: 1px solid rgba(111,207,135,0.18);
+  border-radius: 8px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem; letter-spacing: 0.5px;
+  color: rgba(253,252,249,0.75);
   text-decoration: none;
-  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s;
-  backdrop-filter: blur(4px);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  white-space: nowrap;
 }
 .hero-pill:hover {
-  background: rgba(111,207,135,0.12);
-  border-color: var(--lime);
-  color: var(--white);
-  transform: translateX(4px);
+  background: rgba(111,207,135,0.1);
+  border-color: rgba(111,207,135,0.5);
+  color: var(--lime);
 }
 .hero-pill-dot {
-  width: 6px; height: 6px;
-  background: var(--lime); border-radius: 50%; flex-shrink: 0;
+  width: 5px; height: 5px; flex-shrink: 0;
+  background: var(--lime); border-radius: 50%;
 }
-.hero-pill-arrow {
-  font-size: 0.75rem; color: var(--lime); opacity: 0;
-  transition: opacity 0.2s;
-}
-.hero-pill:hover .hero-pill-arrow { opacity: 1; }
+.hero-pill-arrow { display: none; }
 
 .hero-cta-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
 .hero-btn {
@@ -242,7 +239,7 @@ nav {
   background: var(--lime); color: var(--forest);
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.95rem; font-weight: 700;
-  padding: 0.9rem 2rem; border-radius: 3px; text-decoration: none;
+  padding: 0.75rem 1.6rem; border-radius: 6px; text-decoration: none;
   transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
   box-shadow: 0 4px 20px rgba(111,207,135,0.25);
 }
@@ -252,7 +249,7 @@ nav {
   border: 1.5px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.75);
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.95rem; font-weight: 500;
-  padding: 0.9rem 2rem; border-radius: 3px; text-decoration: none;
+  padding: 0.75rem 1.6rem; border-radius: 6px; text-decoration: none;
   transition: border-color 0.2s, color 0.2s;
 }
 .hero-btn-ghost:hover { border-color: var(--lime); color: var(--lime); }
@@ -315,7 +312,7 @@ nav {
 .section-label {
   font-family: 'DM Mono', monospace;
   font-size: 0.68rem; letter-spacing: 3px; text-transform: uppercase;
-  color: var(--sage); margin-bottom: 1rem;
+  color: var(--sage); margin-bottom: 1.5rem;
 }
 
 /* ─── SERVICIOS ─── */
@@ -376,7 +373,7 @@ nav {
   transition: color 0.3s;
 }
 .svc-icon {
-  font-size: 2rem; margin-bottom: 1rem; display: block;
+  font-size: 2rem; margin-bottom: 1.5rem; display: block;
   filter: grayscale(0.3);
   transition: filter 0.3s;
 }
@@ -524,12 +521,12 @@ nav {
 .contacto-title em { color: var(--sage); font-style: italic; }
 .contacto-sub {
   font-size: 1rem; color: var(--moss);
-  line-height: 1.7; margin-bottom: 1rem;
+  line-height: 1.7; margin-bottom: 1.5rem;
   max-width: 380px;
 }
 .contacto-items {
   display: flex; flex-direction: column; gap: 1.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .contacto-item {
   display: flex; align-items: center; gap: 1rem;
