@@ -138,7 +138,7 @@ nav {
   position: relative; z-index:2;
   flex: 1;
   display: flex; flex-direction: column; justify-content: center;
-  padding: 9rem 5rem 3rem;
+  padding: 11rem 2.5rem 3rem;
   max-width: 1300px; margin: 0 auto; width: 100%;
 }
 
@@ -154,14 +154,14 @@ nav {
 /* TÍTULO: grande, full width, sin columna que lo achique */
 .hero-title {
   font-family: 'Fraunces', serif;
-  font-size: clamp(3.8rem, 7.5vw, 8rem);
-  line-height: 0.95;
-  letter-spacing: -3px;
+  font-size: clamp(2.5rem, 4.8vw, 5.5rem);
+  line-height: 1.15;
+  letter-spacing: -1px;
   color: var(--white);
   margin-bottom: 3rem;
   width: 100%;
 }
-.hero-title .line { display: block; overflow: hidden; }
+.hero-title .line { display: block; overflow: visible; padding-bottom: 0.1em; }
 .hero-title .line span {
   display: block;
   opacity: 0; transform: translateY(100%);
@@ -169,7 +169,6 @@ nav {
 }
 .hero-title .line:nth-child(1) span { animation-delay: 0.4s; }
 .hero-title .line:nth-child(2) span { animation-delay: 0.58s; }
-.hero-title .line:nth-child(3) span { animation-delay: 0.72s; }
 .hero-title .accent { color: var(--lime); font-style: italic; }
 
 /* fila inferior: subtítulo izq + pills/CTAs der */
@@ -673,7 +672,7 @@ footer {
 @media (max-width: 900px) {
   nav { padding: 1rem 1.5rem; }
   .nav-links { display:none; }
-  .hero-inner { grid-template-columns: 1fr; padding: 8rem 1.5rem 3rem; gap: 2rem; }
+  .hero-inner { grid-template-columns: 1fr; padding: 10rem 1.2rem 3rem; gap: 2rem; }
   .hero-right-col { display: none; }
   .hero-bottom { grid-template-columns: repeat(3,1fr); }
   .hero-bottom-item { padding: 1.5rem; }
@@ -728,8 +727,7 @@ footer {
     <div class="hero-tag">Consultoría Profesional · Argentina</div>
     <h1 class="hero-title">
       <span class="line"><span>Medio <em class="accent">Ambiente</em></span></span>
-      <span class="line"><span>y Seguridad</span></span>
-      <span class="line"><span><em class="accent">e Higiene</em></span></span>
+      <span class="line"><span>Seguridad e Higiene</span></span>
     </h1>
     <!-- Fila inferior: subtítulo izq + pills/CTAs der -->
     <div class="hero-bottom-row">
