@@ -138,7 +138,7 @@ nav {
   position: relative; z-index:2;
   flex: 1;
   display: flex; flex-direction: column; justify-content: center;
-  padding: 11rem 2.5rem 3rem;
+  padding: 4.2rem 2.5rem 1.5rem;
   max-width: 1300px; margin: 0 auto; width: 100%;
 }
 
@@ -154,11 +154,11 @@ nav {
 /* TÍTULO: grande, full width, sin columna que lo achique */
 .hero-title {
   font-family: 'Fraunces', serif;
-  font-size: clamp(2.5rem, 4.8vw, 5.5rem);
+  font-size: clamp(3.5rem, 6vw, 7rem);
   line-height: 1.15;
   letter-spacing: -1px;
   color: var(--white);
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   width: 100%;
 }
 .hero-title .line { display: block; overflow: visible; padding-bottom: 0.1em; }
@@ -173,7 +173,7 @@ nav {
 
 /* fila inferior: subtítulo izq + pills/CTAs der */
 .hero-bottom-row {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;
   opacity: 0; animation: fadeUp 0.7s 0.85s forwards;
 }
 .hero-left-col {}
@@ -181,7 +181,7 @@ nav {
 
 .hero-sub {
   font-family: 'Instrument Sans', sans-serif;
-  font-size: 1.1rem; font-weight: 400; line-height: 1.7;
+  font-size: 1rem; font-weight: 400; line-height: 1.5;
   color: rgba(253,252,249,0.7);
 }
 .hero-sub strong { color: var(--white); font-weight: 600; }
@@ -204,18 +204,37 @@ nav {
   91%,100% { transform: translateY(0); }
 }
 
-.hero-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.hero-pill {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  border: 1px solid rgba(111,207,135,0.35);
-  padding: 0.45rem 1rem; border-radius: 100px;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.68rem; letter-spacing: 1px; text-transform: uppercase;
-  color: var(--lime); text-decoration: none;
-  transition: background 0.25s, border-color 0.25s, color 0.25s, transform 0.2s;
+.hero-pills {
+  display: flex; flex-direction: column; gap: 0.4rem;
 }
-.hero-pill:hover { background: var(--lime); color: var(--forest); border-color: var(--lime); transform: translateY(-2px); }
-.hero-pill-dot { width: 5px; height: 5px; background: currentColor; border-radius: 50%; flex-shrink: 0; }
+.hero-pill {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.7rem 1.1rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(111,207,135,0.2);
+  border-radius: 6px;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.85rem; font-weight: 500;
+  color: rgba(253,252,249,0.85);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s;
+  backdrop-filter: blur(4px);
+}
+.hero-pill:hover {
+  background: rgba(111,207,135,0.12);
+  border-color: var(--lime);
+  color: var(--white);
+  transform: translateX(4px);
+}
+.hero-pill-dot {
+  width: 6px; height: 6px;
+  background: var(--lime); border-radius: 50%; flex-shrink: 0;
+}
+.hero-pill-arrow {
+  font-size: 0.75rem; color: var(--lime); opacity: 0;
+  transition: opacity 0.2s;
+}
+.hero-pill:hover .hero-pill-arrow { opacity: 1; }
 
 .hero-cta-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
 .hero-btn {
@@ -505,12 +524,12 @@ nav {
 .contacto-title em { color: var(--sage); font-style: italic; }
 .contacto-sub {
   font-size: 1rem; color: var(--moss);
-  line-height: 1.7; margin-bottom: 3rem;
+  line-height: 1.7; margin-bottom: 1rem;
   max-width: 380px;
 }
 .contacto-items {
   display: flex; flex-direction: column; gap: 1.2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 .contacto-item {
   display: flex; align-items: center; gap: 1rem;
@@ -750,12 +769,12 @@ footer {
       </div>
       <div class="hero-right-col">
         <div class="hero-pills">
-          <a href="#svc-iso" class="hero-pill"><span class="hero-pill-dot"></span>ISO 45001 · 14001</a>
-          <a href="#svc-ambiental" class="hero-pill"><span class="hero-pill-dot"></span>EIA · PGA</a>
-          <a href="#svc-habilitacion" class="hero-pill"><span class="hero-pill-dot"></span>Habilitaciones</a>
-          <a href="#svc-soldadura" class="hero-pill"><span class="hero-pill-dot"></span>Soldaduras</a>
-          <a href="#svc-seguridad" class="hero-pill"><span class="hero-pill-dot"></span>Seguridad e Higiene</a>
-          <a href="#svc-capacitacion" class="hero-pill"><span class="hero-pill-dot"></span>Capacitaciones</a>
+          <a href="#svc-ambiental" class="hero-pill"><span class="hero-pill-dot"></span><span>Servicios Ambientales</span><span class="hero-pill-arrow">→</span></a>
+          <a href="#svc-seguridad" class="hero-pill"><span class="hero-pill-dot"></span><span>Seguridad e Higiene</span><span class="hero-pill-arrow">→</span></a>
+          <a href="#svc-iso" class="hero-pill"><span class="hero-pill-dot"></span><span>Normas ISO 45001 · 14001</span><span class="hero-pill-arrow">→</span></a>
+          <a href="#svc-habilitacion" class="hero-pill"><span class="hero-pill-dot"></span><span>Habilitación de Negocios</span><span class="hero-pill-arrow">→</span></a>
+          <a href="#svc-soldadura" class="hero-pill"><span class="hero-pill-dot"></span><span>Inspección de Soldaduras</span><span class="hero-pill-arrow">→</span></a>
+          <a href="#svc-capacitacion" class="hero-pill"><span class="hero-pill-dot"></span><span>Capacitaciones</span><span class="hero-pill-arrow">→</span></a>
         </div>
         <div class="hero-cta-row">
           <a href="#servicios" class="hero-btn">Ver todos los servicios →</a>
